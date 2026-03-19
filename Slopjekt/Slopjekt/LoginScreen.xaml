@@ -1,0 +1,36 @@
+﻿<Window x:Class="Slopjekt.LoginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Slopjekt"
+        mc:Ignorable="d"
+        Title="LoginScreen" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan="3" Grid.Column="1">
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontSize="50" Text="LOGIN"></TextBlock>
+            <TextBlock Text="Username" TextAlignment="Center"></TextBlock>
+            <TextBox Name="UserNameInputBox"></TextBox>
+            <TextBlock Text="Password" TextAlignment="Center"></TextBlock>
+            <PasswordBox Name="UserPasswordInputBox"></PasswordBox>
+
+            <CheckBox Content="Keep me logged in."></CheckBox>
+            <TextBlock Text="No account yet? Sign up!" FontSize="9" TextAlignment="Center" TextDecorations="Underline" Foreground="Blue" Cursor="Hand"></TextBlock>
+            <TextBlock Name="LoginFeedbackTB" Foreground="Red" TextAlignment="Center" Text="Username or Password incorrect"></TextBlock>
+            <Button Content="Login" Width="50" Margin="0 5 0 0"></Button>
+            
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

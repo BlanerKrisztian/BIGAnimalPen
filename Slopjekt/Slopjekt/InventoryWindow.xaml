@@ -1,0 +1,140 @@
+﻿<Window x:Class="Slopjekt.InventoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Slopjekt"
+        mc:Ignorable="d"
+        Title="InventoryWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="MENU"></Label>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="5" Orientation="Horizontal">
+            <Button Content="Inventory" Margin="5 0 0 0"></Button>
+            <Button Content="Shop" Margin="5 0 0 0"></Button>
+            <Button Content="Friends" Margin="5 0 0 0"></Button>
+            <Button Content="Habitats" Margin="5 0 0 0"></Button>
+            <Button Content="Upgrades" Margin="5 0 0 0"></Button>
+            <Button Content="Achievements" Margin="5 0 0 0"></Button>
+            <Button Content="Stats" Margin="5 0 0 0"></Button>
+            <TextBlock Text="Resources:" Width="250"></TextBlock>
+        </StackPanel>
+
+        <Border BorderThickness="2" BorderBrush="Black" Grid.Row="1" Grid.Column="2" Grid.RowSpan="9" Grid.ColumnSpan="4">
+            <Grid Name="InventoryGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Source="/Temp/Universal_food.png" Width="40" Height="40" Grid.Row="3" Grid.Column="1"></Image>
+                
+                
+                
+            </Grid>
+        </Border>
+
+        <StackPanel Background="LightGray" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Temp/Universal_food.png" Width="40" Height="40"/>
+                <StackPanel>
+                    <TextBlock Text="Universal Pellets lvl 3" FontSize="15"/>
+                    <StackPanel Orientation="Horizontal" Background="White">
+                        <Image Source="/Temp/Star.png" Width="15" Height="15"/>
+                        <Image Source="/Temp/Star.png" Width="15" Height="15"/>
+                        <Image Source="/Temp/Star.png" Width="15" Height="15"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Food Value: 150"></TextBlock>
+                <TextBlock Text="Hydration Value: -15" Margin="5 0 0 0"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Use remaining: 10"></TextBlock>
+                <TextBlock Text="Spoil time: 15d" Margin="5 0 0 0"></TextBlock>
+            </StackPanel>
+                
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Use" Margin="2 0"/>
+                <Button Content="Sell" Margin="2 0"/>
+                <Button Content="Combine" Margin="2 0"/>
+                <Button Content="Scrap" Margin="2 0"/>
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <TextBlock Text="Crafting" FontSize="15"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+            <ComboBox Name="DropDownType" MaxDropDownHeight="200" Width="200" SelectedIndex="1">
+                <ComboBoxItem Content="Food: Meat"></ComboBoxItem>
+                <ComboBoxItem Content="Food: Universal"></ComboBoxItem>
+                <ComboBoxItem Content="Food: Plant"></ComboBoxItem>
+                <ComboBoxItem Content="Hydration: Water"></ComboBoxItem>
+                <ComboBoxItem Content="Hydration: MotorOil"></ComboBoxItem>
+                <ComboBoxItem Content="Hydration: Blood"></ComboBoxItem>
+                <ComboBoxItem Content="Hydration: SuperWater"></ComboBoxItem>
+                <ComboBoxItem Content="Toy: Small"></ComboBoxItem>
+                <ComboBoxItem Content="Toy: Medium"></ComboBoxItem>
+                <ComboBoxItem Content="Toy: Large"></ComboBoxItem>
+                <ComboBoxItem Content="Toy: Animal"></ComboBoxItem>
+                <ComboBoxItem Content="Toy: Object"></ComboBoxItem>
+                <ComboBoxItem Content="Toy: Static"></ComboBoxItem>
+            </ComboBox>
+            <ComboBox Name="DropDownRarity" Width="65">
+                <ComboBoxItem Content="1 start"></ComboBoxItem>
+                <ComboBoxItem Content="2 start"></ComboBoxItem>
+                <ComboBoxItem Content="3 start"></ComboBoxItem>
+                <ComboBoxItem Content="4 start"></ComboBoxItem>
+                <ComboBoxItem Content="5 start"></ComboBoxItem>
+                <ComboBoxItem Content="6 start"></ComboBoxItem>
+            </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Cost: "/>
+                <TextBlock Text="5 meat" Margin="2 0"/>
+                <TextBlock Text="5 plant" Margin="2 0"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>
