@@ -60,3 +60,4 @@ const userDataTable = dbHandler.define('userdata',{
 
 userTable.hasOne(userDataTable) // connected the tables together
 userDataTable.belongsTo(userTable)
+// use dbdiagram.io
