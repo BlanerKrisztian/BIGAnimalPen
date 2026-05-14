@@ -38,6 +38,11 @@ const userDataTable = dbHandler.define('userdata',{
         allowNull:false,
         defaultValue: 100
     },
+    gems:{
+        type:DataTypes.INTEGER,
+        allowNull:false,
+        defaultValue:10
+    },
     level:{
         type:DataTypes.INTEGER,
         allowNull: false,
@@ -56,7 +61,14 @@ const userDataTable = dbHandler.define('userdata',{
     
 })
 
-
+const userDataTable = dbHandler.define('itemdata',{
+    id:{
+        type:DataTypes.UUID,
+        defaultValue:DataTypes.UUIDV4,
+        allowNull:false,
+        primaryKey:true
+    }
+})
 
 userTable.hasOne(userDataTable) // connected the tables together
 userDataTable.belongsTo(userTable)
