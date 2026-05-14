@@ -19,14 +19,29 @@ namespace Slopjekt
         public MainWindow()
         {
             InitializeComponent();
-            start();
         }
 
-        public void start()
+        public void SwitchToInventoryWindow()
         {
             InventoryWindow screen = new();
             screen.Show();
             this.Close();
         }
+
+        public void SwitchToProfileWindow()
+        {
+            Profile screen = new();
+            screen.Show();
+            this.Close();
+        }
+
+        public void SwitchToSignUpScreen()
+        {
+            Profile screen = new();
+            screen.Show();
+            this.Close();
+        }
+
+        
     }
 }

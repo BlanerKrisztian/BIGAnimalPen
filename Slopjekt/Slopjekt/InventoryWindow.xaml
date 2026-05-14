@@ -121,12 +121,12 @@
                 <ComboBoxItem Content="Toy: Static"></ComboBoxItem>
             </ComboBox>
             <ComboBox Name="DropDownRarity" Width="65">
-                <ComboBoxItem Content="1 start"></ComboBoxItem>
-                <ComboBoxItem Content="2 start"></ComboBoxItem>
-                <ComboBoxItem Content="3 start"></ComboBoxItem>
-                <ComboBoxItem Content="4 start"></ComboBoxItem>
-                <ComboBoxItem Content="5 start"></ComboBoxItem>
-                <ComboBoxItem Content="6 start"></ComboBoxItem>
+                <ComboBoxItem Content="1 star"></ComboBoxItem>
+                <ComboBoxItem Content="2 star"></ComboBoxItem>
+                <ComboBoxItem Content="3 star"></ComboBoxItem>
+                <ComboBoxItem Content="4 star"></ComboBoxItem>
+                <ComboBoxItem Content="5 star"></ComboBoxItem>
+                <ComboBoxItem Content="6 star"></ComboBoxItem>
             </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
