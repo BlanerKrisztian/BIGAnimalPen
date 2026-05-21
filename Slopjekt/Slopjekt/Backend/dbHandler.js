@@ -61,7 +61,7 @@ const userDataTable = dbHandler.define('userdata',{
     
 })
 
-const userDataTable = dbHandler.define('itemdata',{
+const itemDataTable = dbHandler.define('itemdata',{
     id:{
         type:DataTypes.UUID,
         defaultValue:DataTypes.UUIDV4,
