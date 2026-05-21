@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Slopjekt.Classes;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,8 @@ namespace Slopjekt
         public MainWindow()
         {
             InitializeComponent();
+            DebugLogger.WriteDebug("Application loaded into MainWindow.", DebugType.Info);
+            SwitchToSignUpScreen();
         }
 
         public void SwitchToInventoryWindow()
@@ -37,7 +40,7 @@ namespace Slopjekt
 
         public void SwitchToSignUpScreen()
         {
-            Profile screen = new();
+            SignUpScreen screen = new();
             screen.Show();
             this.Close();
         }

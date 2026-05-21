@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="SignUpScreen" Height="450" Width="800">
     <Grid>
+        <Grid.Effect>
+            <BlurEffect Radius="2"></BlurEffect>
+        </Grid.Effect>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Slopjekt.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,6 +24,26 @@ namespace Slopjekt
         public SignUpScreen()
         {
             InitializeComponent();
+            CollectUserInput();
+            CollectUserInput();
+            CollectUserInput();
         }
+        public SignupData CollectUserInput()
+        {
+            try
+            {
+                string UserName = UserNameInputBox.Text;
+                SecureString Password = UserPasswordInputBox.SecurePassword;
+                string promocode = PromoCodeInputBox.Text;
+                return new SignupData(UserName, Password, promocode);
+            }
+            catch (Exception e)
+            {
+                DebugLogger.WriteDebug(e.Message, DebugType.Error);
+            }
+            return null;
+        }
+
+
     }
 }
